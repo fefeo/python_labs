@@ -10,3 +10,36 @@ from numpy import *
 #Ad 5 Hint write in Google "how to create a github repo". There are plenty of tutorials explaining this matter.
 
 #1
+def y(x):
+    y=2*(x**2)+2*x+2
+    return y
+for x in range(56,101):
+    print(y(x))
+
+
+print('-'*20)
+
+#2
+x=int(input('put int number: '))
+
+if x>0:
+    s=1
+    for i in range(x):
+        s=s*(i+1)
+        print(s)
+else:
+    print('wrong number')
+
+print('-'*20)
+
+#3
+arr=[]
+x=int(input("put size of an array: "))
+
+for i in range(x):
+    print('value of index',i,':'), arr.append(int(input()))
+
+print(arr)
+print('index: ',arr.index(min(arr)), "value:", min(arr))
+
+
