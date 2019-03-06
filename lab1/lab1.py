@@ -1,4 +1,6 @@
 from numpy import *
+from numpy.random import *
+from matplotlib.pyplot import *
 #TASKS (4p)
 #1 calculate & print the value of function y = 2x^2 + 2x + 2 for x=[56, 57, ... 100] (0.5p)
 #2 ask the user for a number and print its factorial (1p)
@@ -10,6 +12,9 @@ from numpy import *
 #Ad 5 Hint write in Google "how to create a github repo". There are plenty of tutorials explaining this matter.
 
 #1
+print(' calculate & print the value of function y = 2x^2 + 2x + 2 for x=[56, 57, ... 100]')
+
+
 def y(x):
     y=2*(x**2)+2*x+2
     return y
@@ -20,6 +25,9 @@ for x in range(56,101):
 print('-'*20)
 
 #2
+print('ask the user for a number and print its factorial')
+
+
 z=int(input('put int number: '))
 
 if z>0:
@@ -33,6 +41,9 @@ else:
 print('-'*20)
 
 #3
+print('write a function which takes an array of numbers as an input and finds the lowest value. Return the index of that element and its value')
+
+
 def tln(x):
     x=int(input('size of an array: '))
     arr=[]
@@ -47,6 +58,10 @@ def tln(x):
     print(arr)
     return print('index:',arr.index(min(arr)),"value:",min(arr))
 tln(x)
+
+#4
+print('looking at lab1-input and lab1-plot files create your own python script that takes a number and returns any chart of a given length')
+
 
 
 
