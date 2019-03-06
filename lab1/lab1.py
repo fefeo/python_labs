@@ -59,9 +59,28 @@ def tln(x):
     return print('index:',arr.index(min(arr)),"value:",min(arr))
 tln(x)
 
+
+print('-'*20)
+
 #4
 print('looking at lab1-input and lab1-plot files create your own python script that takes a number and returns any chart of a given length')
 
+s=int(input('start point: '))
+e=int(input('end point: '))
 
+if s==e:
+    print('points set wrong! ')
+    while s==e:
+        e=int(input('put correct end point: '))
 
+x=linspace(s,e,10)
+y=sin((x**2)+2*x+2)
+
+plot(x,y, color='orange')
+plot(x,y, 'o', color='red')
+title('wykres')
+xlabel('my lenght')
+ylabel('oś y')
+ylim(-2,2)
+show()
 
