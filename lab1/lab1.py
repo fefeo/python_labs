@@ -41,7 +41,7 @@ else:
 print('-'*20)
 
 #3
-print('write a function which takes an array of numbers as an input and finds the lowest value. Return the index of that element and its value')
+print(   'write a function which takes an array of numbers as an input and finds the lowest value. Return the index of that element and its value')
 
 
 #def tln(x):
