@@ -44,20 +44,47 @@ print('-'*20)
 print('write a function which takes an array of numbers as an input and finds the lowest value. Return the index of that element and its value')
 
 
-def tln(x):
-    x=int(input('size of an array: '))
-    arr=[]
+#def tln(x):
+ #   x=int(input('size of an array: '))
+  #  arr=[]
 
-    for i in range(x):
-        print('value of index',i,":"),
-        v=int(input())
-        if v>0:
-            arr.append(v)
-        else:
-           print('wrong number')
-    print(arr)
-    return print('index:',arr.index(min(arr)),"value:",min(arr))
-tln(x)
+   # for i in range(x):
+    #    print('value of index',i,":"),
+     #   v=int(input())
+      #  if v>0:
+       #     arr.append(v)
+        #else:
+         #  print('wrong number')
+    #print(arr)
+    #return print('index:',arr.index(min(arr)),"value:",min(arr))
+#tln(x)
+
+l=[]
+d=int(input('put array size: '))
+for z in range(d):
+    print('put value of index',z,':')
+    v=int(input())
+    l.append(v)
+print(l)
+
+#l=[4,5,3,1,55]
+index=[]
+def min(i):
+
+    n=l[0]
+    for i in l:
+        if i <= n:
+            n=i
+    print('lowest value: ',n)
+
+    for i in range(len(l)):
+        if l[i]==n:
+            index.append(i)
+
+    print('index: ', index)
+
+
+min(l)
 
 
 print('-'*20)
