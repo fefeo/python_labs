@@ -1,42 +1,25 @@
 from numpy import *
-from cs50 import get_int , get_float
+from cs50 import *
 
-print('circle = c')
-print('rectangle = re')
-print('triangle = t')
-print('rhombus = r')
 
-#o = str(input('podaj fig'))
+def countField(figure, x, y = 1):
 
-def countField(figure):
-    if figure == 'c':
-        while True:
-            x = get_float('put radius x: ')
-            if x > 0:
-                Fie = pi * x ** 2
-                break
-        return Fie
-    elif figure == 're':
-        while True:
-            x = get_float('put parameter x: ')
-            y = get_float('put parameter y: ')
-            if x > 0  and y > 0:
-                Fie = x * y
-                break
-        return Fie
-    elif figure == 't' or figure == 'r':
-        while True:
-            x = get_float('put parameter x: ')
-            y = get_float('put parameter y: ')
-            if x > 0 and y > 0:
-                Fie = 1/2 * x * y
-                break
-        return Fie
+    if x <= 0 or y <= 0:
+        print('both parameters must be higher then 0')
+        quit()
+
+    if figure == 'circle':
+        field = pi * x **2
+    elif figure == 'rectangle':
+        field = x * y
+    elif figure == 'triangle' or figure == 'rhombus':
+        field = (x * y)/2
     else:
-        return('error')
+        print('i do not know this fig')
+        quit()
+
+    return field
 
 
-
-
-print(countField('s'))
+print(countField('rectangle',3,3))
 
